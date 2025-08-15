@@ -2,8 +2,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, MapPin, Clock, Users } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Events = () => {
+  const navigate = useNavigate();
   const upcomingEvents = [
     {
       id: 1,
@@ -219,7 +221,10 @@ const Events = () => {
             Partner with us to organize impactful community events. We provide support, 
             resources, and expertise to make your event successful.
           </p>
-          <Button className="bg-gradient-primary hover:opacity-90 shadow-soft px-8">
+          <Button 
+            className="bg-gradient-primary hover:opacity-90 shadow-soft px-8"
+            onClick={() => navigate('/contact')}
+          >
             Contact Us
           </Button>
         </div>
