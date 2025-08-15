@@ -36,17 +36,17 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      details: ["+1 (555) 123-4567", "+1 (555) 123-4568"],
+      details: ["+91 996321773"],
     },
     {
       icon: Mail,
       title: "Email",
-      details: ["info@ehsaasfoundation.org", "support@ehsaasfoundation.org"],
+      details: ["khanaslam80@yahoo.com"],
     },
     {
       icon: MapPin,
       title: "Address",
-      details: ["123 Hope Street", "Unity City, State 12345"],
+      details: ["Aiman Zai Jalal Nagar, Ramnagar Colony", "Shahjahanpur, Uttar Pradesh 242001"],
     },
     {
       icon: Clock,
