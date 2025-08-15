@@ -1,14 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Heart, Users, Target, Award, ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import heroImage from "@/assets/hero-image.jpg";
 
 const Home = () => {
+  const navigate = useNavigate();
+  
   const stats = [
-    { icon: Users, label: "Lives Impacted", value: "50,000+" },
-    { icon: Heart, label: "Volunteers", value: "2,500+" },
-    { icon: Target, label: "Projects Completed", value: "150+" },
-    { icon: Award, label: "Awards Received", value: "25+" },
+    { icon: Users, label: "Lives Impacted", value: "5,000+" },
+    { icon: Heart, label: "Volunteers", value: "100+" },
+    { icon: Target, label: "Projects Completed", value: "50+" },
+    { icon: Award, label: "Awards Received", value: "10+" },
   ];
 
   const programs = [
@@ -56,7 +59,12 @@ const Home = () => {
             <Button size="lg" className="bg-foundation-orange hover:bg-foundation-orange/90 text-white shadow-hero text-lg px-8 py-6">
               Donate Now
             </Button>
-            <Button size="lg" variant="outline" className="bg-white/10 border-white text-white hover:bg-white hover:text-primary backdrop-blur-sm text-lg px-8 py-6">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="bg-white/10 border-white text-white hover:bg-white hover:text-primary backdrop-blur-sm text-lg px-8 py-6"
+              onClick={() => navigate('/gallery')}
+            >
               Learn More
             </Button>
           </div>
