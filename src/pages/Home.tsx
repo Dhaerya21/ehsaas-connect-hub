@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Heart, Users, Target, Award, ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import heroImage from "@/assets/hero-image.jpg";
+import DonationDialog from "@/components/DonationDialog";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -56,9 +57,11 @@ const Home = () => {
             Join us in creating positive change through compassion, support, and sustainable development programs that uplift communities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-foundation-orange hover:bg-foundation-orange/90 text-white shadow-hero text-lg px-8 py-6">
-              Donate Now
-            </Button>
+            <DonationDialog>
+              <Button size="lg" className="bg-foundation-orange hover:bg-foundation-orange/90 text-white shadow-hero text-lg px-8 py-6">
+                Donate Now
+              </Button>
+            </DonationDialog>
             <Button 
               size="lg" 
               variant="outline" 
@@ -137,9 +140,11 @@ const Home = () => {
             Join us in our mission to build a better world for everyone.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-foundation-orange hover:bg-foundation-orange/90 shadow-hero">
-              Donate Today
-            </Button>
+            <DonationDialog>
+              <Button size="lg" className="bg-foundation-orange hover:bg-foundation-orange/90 shadow-hero">
+                Donate Today
+              </Button>
+            </DonationDialog>
             <Button size="lg" variant="outline" className="bg-white/10 border-white hover:bg-white hover:text-primary backdrop-blur-sm">
               Become a Volunteer
             </Button>

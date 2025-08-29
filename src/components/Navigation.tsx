@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Heart, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import DonationDialog from "./DonationDialog";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,9 +43,11 @@ const Navigation = () => {
                 {item.label}
               </Link>
             ))}
-            <Button className="bg-gradient-primary hover:opacity-90 shadow-soft">
-              Donate Now
-            </Button>
+            <DonationDialog>
+              <Button className="bg-gradient-primary hover:opacity-90 shadow-soft">
+                Donate Now
+              </Button>
+            </DonationDialog>
           </div>
 
           {/* Mobile menu button */}
@@ -74,9 +77,11 @@ const Navigation = () => {
                   {item.label}
                 </Link>
               ))}
-              <Button className="bg-gradient-primary hover:opacity-90 shadow-soft w-fit">
-                Donate Now
-              </Button>
+              <DonationDialog>
+                <Button className="bg-gradient-primary hover:opacity-90 shadow-soft w-fit">
+                  Donate Now
+                </Button>
+              </DonationDialog>
             </div>
           </div>
         )}
